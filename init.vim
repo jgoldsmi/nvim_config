@@ -34,6 +34,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Valloric/MatchTagAlways'
 Plug 'mbbill/undotree'
 Plug 'kana/vim-fakeclip'
+Plug 'haya14busa/incsearch.vim'
 " Text objects
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-surround'
@@ -239,6 +240,9 @@ nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>* :CtrlSF <c-r>=expand("<cword>")<CR><CR>
 nnoremap <leader>/ :Ag 
 noremap <silent> <C-l> :nohls<CR><C-l>
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
 "==============================================================================
 " Visual Mode Mappings
