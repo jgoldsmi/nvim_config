@@ -26,6 +26,7 @@ Plug 'tpope/vim-eunuch'
 " Editing
 Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
+Plug 'matze/vim-move'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
@@ -36,6 +37,8 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'mbbill/undotree'
 Plug 'kana/vim-fakeclip'
 Plug 'haya14busa/incsearch.vim'
+Plug 'qpkorr/vim-bufkill'
+Plug 'terryma/vim-multiple-cursors'
 " Text objects
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-surround'
@@ -74,6 +77,7 @@ Plug 'elzr/vim-json'
 Plug 'lepture/vim-jinja'
 Plug 'mxw/vim-jsx'
 Plug 'isRuslan/vim-es6'
+Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 
 call plug#end()
 
