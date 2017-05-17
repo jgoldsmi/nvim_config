@@ -147,8 +147,12 @@ endif
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
+"==============================================================================
+" Deoplete settings
+"==============================================================================
 let g:deoplete#enable_at_startup = 1
 autocmd CompleteDone * pclose!
+
 "==============================================================================
 " Neomake settings
 "==============================================================================
@@ -160,6 +164,7 @@ augroup my_neomake_highlights
                 \ hi link NeomakeWarning SpellCap
 augroup END
 colorscheme hybrid
+
 "==============================================================================
 " Airline settings
 "==============================================================================
@@ -184,9 +189,10 @@ command! -bang -nargs=* Ag
             \                 <bang>0)
 
 "==============================================================================
-" EasyMotion settings
+" vim-sneak settings
 "==============================================================================
-let g:EasyMotion_keys = 'arsdheiqwfpgjluy;zxcvbkmtno' " default, but colemak
+" let g:sneak#label = 1
+" let g:sneak#target_labels = "arstdhneioqwfpgjluy;zxcvbkm/ARSTDHNEIOQWFPGJLUY:ZXCVBKM>"
 
 "==============================================================================
 " Python settings
@@ -194,11 +200,21 @@ let g:EasyMotion_keys = 'arsdheiqwfpgjluy;zxcvbkmtno' " default, but colemak
 let python_highlight_all = 1
 let g:jedi#popup_on_dot = 0
 let g:jedi#show_call_signatures = "2"
-let g:jedi#usages_command = "<leader>gu"
-let g:jedi#goto_command = "<leader>gd"
+let g:jedi#usages_command = "<leader>u"
+let g:jedi#goto_command = "<leader>d"
 let g:jedi#completions_enabled = 0
 let g:jedi#force_py_version = 3
 let g:jedi#show_call_signatures_delay = 0
+
+"==============================================================================
+" Golden-Ratio settings
+"==============================================================================
+let g:golden_ratio_exclude_nonmodifiable = 1
+
+"==============================================================================
+" vim-move settings
+"==============================================================================
+let g:move_key_modifier = 'C'
 
 "==============================================================================
 " Custom mappings
@@ -212,14 +228,8 @@ let g:maplocalleader = " "
 "==============================================================================
 " Normal Mode Mappings
 "==============================================================================
-" nmap s <Plug>(easymotion-s2)
-nmap s <Plug>(easymotion-overwin-f2)
-nmap t <Plug>(easymotion-t2)
-nnoremap <bar> :vsplit<CR>
 nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader>bd :lclose<CR>:bd<CR>
-nnoremap <leader>bn :bn<CR>
-nnoremap <leader>bp :bp<CR>
 nnoremap <leader>bt :BTags<CR>
 "CtrlP Bindings
 nnoremap <leader>ff :Files<CR>
@@ -229,21 +239,15 @@ nmap ga <Plug>(EasyAlign)
 nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gg :Gstatus<CR>
 nnoremap <leader>gw :Gwrite<CR>
-" Move to line
-map <Leader>mm <Plug>(easymotion-bd-jk)
-nmap <Leader>mm <Plug>(easymotion-overwin-line)
-" Move to word
-map  <Leader>mw <Plug>(easymotion-bd-w)
-nmap <Leader>mw <Plug>(easymotion-overwin-w)
 nnoremap <leader>n :bn<CR>
 nnoremap <leader>p :bp<CR>
 nnoremap <leader>sl :BLines<CR>
 nnoremap <leader>sp :CtrlSF 
-nnoremap <leader>sP :CtrlSF <c-r>=expand("<cword>")<CR>
+nnoremap <leader>sP :CtrlSF<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>* :CtrlSF <c-r>=expand("<cword>")<CR><CR>
-nnoremap <leader>/ :Ag 
+nnoremap <leader>/ :Ag<CR>
 noremap <silent> <C-l> :nohls<CR><C-l>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
@@ -277,3 +281,14 @@ vnoremap < <gv
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
+"==============================================================================
+" Command Mode Mappings
+"==============================================================================
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <M-b> <S-Left>
+cnoremap <M-f> <S-Right>
