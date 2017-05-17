@@ -24,7 +24,7 @@ Plug 'justinmk/vim-dirvish'
 Plug 'dyng/ctrlsf.vim'
 Plug 'tpope/vim-eunuch'
 " Editing
-Plug 'tpope/vim-fugitive'
+Plug 'jreybert/vimagit'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
