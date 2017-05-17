@@ -20,7 +20,7 @@ call plug#begin("~/.config/nvim/plugged")
 " Navigation
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-vinegar'
+Plug 'justinmk/vim-dirvish'
 Plug 'dyng/ctrlsf.vim'
 Plug 'tpope/vim-eunuch'
 " Editing
