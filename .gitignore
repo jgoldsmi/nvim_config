@@ -1,5 +1,5 @@
 tmp/
 plugged/
 backup/
-autoload/plug.vim
+autoload/plug.vim*
 .netrwhist
