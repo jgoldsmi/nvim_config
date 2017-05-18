@@ -67,7 +67,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 " Programming
-Plug 'w0rp/ale'
+Plug 'benekastah/neomake'
 Plug 'editorconfig/editorconfig-vim'
 " Programming Languages
 Plug 'hdima/python-syntax'
@@ -152,6 +152,18 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 "==============================================================================
 let g:deoplete#enable_at_startup = 1
 autocmd CompleteDone * pclose!
+
+"==============================================================================
+" Neomake settings
+"==============================================================================
+autocmd! BufWritePost,BufEnter * Neomake
+augroup my_neomake_highlights
+    au!
+    autocmd ColorScheme *
+                \ hi link NeomakeError SpellBad |
+                \ hi link NeomakeWarning SpellCap
+augroup END
+colorscheme hybrid
 
 "==============================================================================
 " Airline settings
