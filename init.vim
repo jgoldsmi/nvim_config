@@ -184,11 +184,6 @@ let g:airline#extensions#tabline#enabled = 1
 "   :Ag  - Start fzf with hidden preview window that can be enabled with "?" key
 "   :Ag! - Start fzf in fullscreen and display the preview window above
 let $FZF_DEFAULT_COMMAND = 'ag -l'
-command! -bang -nargs=* Ag
-            \ call fzf#vim#ag(<q-args>,
-            \                 <bang>0 ? fzf#vim#with_preview('up:60%')
-            \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
-            \                 <bang>0)
 
 "==============================================================================
 " vim-sneak settings
@@ -209,14 +204,15 @@ let g:jedi#force_py_version = 3
 let g:jedi#show_call_signatures_delay = 0
 
 "==============================================================================
-" Golden-Ratio settings
-"==============================================================================
-let g:golden_ratio_exclude_nonmodifiable = 1
-
-"==============================================================================
 " vim-move settings
 "==============================================================================
 let g:move_key_modifier = 'C'
+
+
+" Use ag if available
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 "==============================================================================
 " Custom mappings
