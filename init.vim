@@ -8,78 +8,80 @@ set nocp
 "==============================================================================
 " Plug Setup
 "==============================================================================
+set runtimepath+=/Users/jonathan/.config/nvim/dein/repos/github.com/Shougo/dein.vim
 
-" Load vim-plug for first time
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall
-endif
-" TODO Sort these
-call plug#begin("~/.config/nvim/plugged")
+if dein#load_state('/Users/jonathan/.config/nvim/dein')
+  call dein#begin('/Users/jonathan/.config/nvim/dein')
+
+  " Let dein manage dein
+  call dein#add('/Users/jonathan/.config/nvim/dein/repos/github.com/Shougo/dein.vim')
 " Navigation
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'justinmk/vim-dirvish'
-Plug 'dyng/ctrlsf.vim'
-Plug 'tpope/vim-eunuch'
-" Editing
-Plug 'tpope/vim-fugitive'
-Plug 'jreybert/vimagit'
-Plug 'matze/vim-move'
-Plug 'junegunn/vim-easy-align'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'justinmk/vim-sneak'
-Plug 'Valloric/MatchTagAlways'
-Plug 'mbbill/undotree'
-Plug 'kana/vim-fakeclip'
-Plug 'haya14busa/incsearch.vim'
-Plug 'qpkorr/vim-bufkill'
-Plug 'terryma/vim-multiple-cursors'
-" Text objects
-Plug 'terryma/vim-expand-region'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-entire' " ae, ie
-Plug 'kana/vim-textobj-lastpat' " a/, i/, a?, i?
-Plug 'kana/vim-textobj-line' " al, il
-Plug 'kana/vim-textobj-indent' " ai, ii, aI, iI
-Plug 'lucapette/vim-textobj-underscore' " a_, i_
-Plug 'sgur/vim-textobj-parameter' " a, , i,
-" Display
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'junegunn/vim-peekaboo'
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'majutsushi/tagbar'
-Plug 'w0ng/vim-hybrid'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'mhinz/vim-signify'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'Yggdroot/indentLine'
-Plug 'roman/golden-ratio'
-" Completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-" Programming
-Plug 'benekastah/neomake'
-Plug 'editorconfig/editorconfig-vim'
-" Programming Languages
-Plug 'hdima/python-syntax'
-Plug 'hynek/vim-python-pep8-indent'
-Plug 'davidhalter/jedi-vim'
-Plug 'elzr/vim-json'
-Plug 'lepture/vim-jinja'
-Plug 'mxw/vim-jsx'
-Plug 'isRuslan/vim-es6'
-Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+  call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+  call dein#add('junegunn/fzf.vim')
+  call dein#add('justinmk/vim-dirvish')
+  call dein#add('dyng/ctrlsf.vim')
+  call dein#add('tpope/vim-eunuch')
+  " Editing
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('jreybert/vimagit')
+  call dein#add('matze/vim-move')
+  call dein#add('junegunn/vim-easy-align')
+  call dein#add('tpope/vim-commentary')
+  call dein#add('tpope/vim-repeat')
+  call dein#add('tpope/vim-surround')
+  call dein#add('tpope/vim-unimpaired')
+  call dein#add('justinmk/vim-sneak')
+  call dein#add('Valloric/MatchTagAlways')
+  call dein#add('mbbill/undotree')
+  call dein#add('kana/vim-fakeclip')
+  call dein#add('haya14busa/incsearch.vim')
+  call dein#add('qpkorr/vim-bufkill')
+  call dein#add('terryma/vim-multiple-cursors')
+  call dein#add('mileszs/ack.vim')
+  " Text objects
+  call dein#add('terryma/vim-expand-region')
+  call dein#add('tpope/vim-surround')
+  call dein#add('tpope/vim-repeat')
+  call dein#add('kana/vim-textobj-user')
+  call dein#add('kana/vim-textobj-entire') " ae, ie
+  call dein#add('kana/vim-textobj-lastpat') " a/, i/, a?, i?
+  call dein#add('kana/vim-textobj-line') " al, il
+  call dein#add('kana/vim-textobj-indent') " ai, ii, aI, iI
+  call dein#add('lucapette/vim-textobj-underscore') " a_, i_
+  call dein#add('sgur/vim-textobj-parameter') " a, , i,
+  " Display
+  call dein#add('mhinz/vim-startify')
+  call dein#add('bronson/vim-trailing-whitespace')
+  call dein#add('junegunn/vim-peekaboo')
+  call dein#add('bronson/vim-trailing-whitespace')
+  call dein#add('majutsushi/tagbar')
+  call dein#add('w0ng/vim-hybrid')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('mhinz/vim-signify')
+  call dein#add('kien/rainbow_parentheses.vim')
+  call dein#add('Yggdroot/indentLine')
+  call dein#add('roman/golden-ratio')
+  " Completion
+  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('zchee/deoplete-jedi')
+  call dein#add('carlitux/deoplete-ternjs', { 'build': 'npm install -g tern' })
+  " Programming
+  call dein#add('benekastah/neomake')
+  call dein#add('editorconfig/editorconfig-vim')
+  " Programming Languages
+  call dein#add('vim-python/python-syntax')
+  call dein#add('hynek/vim-python-pep8-indent')
+  call dein#add('davidhalter/jedi-vim')
+  call dein#add('elzr/vim-json')
+  call dein#add('lepture/vim-jinja')
+  call dein#add('mxw/vim-jsx')
+  call dein#add('isRuslan/vim-es6')
+  call dein#add('tpope/vim-markdown', { 'on_ft': 'markdown' })
 
-call plug#end()
+  call dein#end()
+  call dein#save_state()
+endif
 
 syntax on
 filetype plugin indent on

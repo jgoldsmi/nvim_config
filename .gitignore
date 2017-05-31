@@ -1,5 +1,4 @@
+dein/
 tmp/
-plugged/
 backup/
-autoload/plug.vim*
 .netrwhist
