@@ -156,6 +156,12 @@ let g:deoplete#enable_at_startup = 1
 autocmd CompleteDone * pclose!
 
 "==============================================================================
+" Startify settings
+"==============================================================================
+let g:startify_change_to_dir = 0
+let g:startify_change_to_vcs_root = 1
+
+"==============================================================================
 " Neomake settings
 "==============================================================================
 autocmd! BufWritePost,BufEnter * Neomake
