@@ -194,8 +194,8 @@ let $FZF_DEFAULT_COMMAND = 'ag -l'
 "==============================================================================
 " vim-sneak settings
 "==============================================================================
-" let g:sneak#label = 1
-" let g:sneak#target_labels = "arstdhneioqwfpgjluy;zxcvbkm/ARSTDHNEIOQWFPGJLUY:ZXCVBKM>"
+let g:sneak#label = 1
+let g:sneak#target_labels = "arstdhneioqwfpgjluy;zxcvbkm/ARSTDHNEIOQWFPGJLUY:ZXCVBKM>"
 
 "==============================================================================
 " Python settings
