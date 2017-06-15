@@ -92,6 +92,7 @@ filetype plugin indent on
 set backup backupdir=~/.config/nvim/backup
 set directory=~/.config/nvim/tmp
 set omnifunc=syntaxcomplete#Complete
+set relativenumber
 set number
 set autoread
 set expandtab smarttab
