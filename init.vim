@@ -113,6 +113,7 @@ set nostartofline
 set nofoldenable
 set history=10000
 set backspace=eol,indent,start
+set clipboard=unnamed
 set mouse=a
 set shortmess+=I
 set noshowmode
