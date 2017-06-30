@@ -217,10 +217,18 @@ let g:jedi#show_call_signatures_delay = 0
 let g:move_key_modifier = 'C'
 
 
+"==============================================================================
+" ack.vim settings
+"==============================================================================
 " Use ag if available
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+"
+"==============================================================================
+" incsearch settings
+"==============================================================================
+let g:incsearch#auto_nohlsearch = 1
 
 "==============================================================================
 " Custom mappings
@@ -235,7 +243,7 @@ let g:maplocalleader = " "
 " Normal Mode Mappings
 "==============================================================================
 nnoremap <leader>bb :Buffers<CR>
-nnoremap <leader>bd :lclose<CR>:bd<CR>
+nnoremap <leader>bd :lclose<CR>:BD<CR>
 nnoremap <leader>bt :BTags<CR>
 "CtrlP Bindings
 nnoremap <leader>ff :Files<CR>
