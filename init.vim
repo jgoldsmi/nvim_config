@@ -55,7 +55,7 @@ if dein#load_state('/Users/jonathan/.config/nvim/dein')
   call dein#add('junegunn/vim-peekaboo')
   call dein#add('bronson/vim-trailing-whitespace')
   call dein#add('majutsushi/tagbar')
-  call dein#add('w0ng/vim-hybrid')
+  call dein#add('dracula/vim')
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('mhinz/vim-signify')
@@ -125,10 +125,11 @@ set scrolloff=5
 set wrap
 set vb t_vb=
 set t_Co=256
+if has("termguicolors")
+     set termguicolors
+ endif
+colorscheme dracula
 set background=dark
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1
-colorscheme hybrid
 set listchars=eol:¬,tab:→\ ,trail:·,extends:»,precedes:«
 set list
 set cursorline
@@ -173,12 +174,11 @@ augroup my_neomake_highlights
                 \ hi link NeomakeError SpellBad |
                 \ hi link NeomakeWarning SpellCap
 augroup END
-colorscheme hybrid
 
 "==============================================================================
 " Airline settings
 "==============================================================================
-let g:airline_theme = 'hybrid'
+let g:airline_theme = 'dracula'
 let g:airline#extensions#tabline#enabled = 1
 
 
