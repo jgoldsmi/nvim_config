@@ -62,7 +62,7 @@ if dein#load_state('/Users/jonathan/.config/nvim/dein')
   call dein#add('mhinz/vim-signify')
   call dein#add('kien/rainbow_parentheses.vim')
   call dein#add('Yggdroot/indentLine')
-  call dein#add('roman/golden-ratio')
+  call dein#add('zhaocai/GoldenView.Vim')
   " Completion
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('zchee/deoplete-jedi')
@@ -181,7 +181,6 @@ augroup END
 "==============================================================================
 let g:airline_theme = 'dracula'
 let g:airline#extensions#tabline#enabled = 1
-
 
 "==============================================================================
 " Javascript settings
