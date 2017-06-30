@@ -38,6 +38,7 @@ if dein#load_state('/Users/jonathan/.config/nvim/dein')
   call dein#add('qpkorr/vim-bufkill')
   call dein#add('terryma/vim-multiple-cursors')
   call dein#add('mileszs/ack.vim')
+  call dein#add('AndrewRadev/splitjoin.vim')
   " Text objects
   call dein#add('terryma/vim-expand-region')
   call dein#add('tpope/vim-surround')
