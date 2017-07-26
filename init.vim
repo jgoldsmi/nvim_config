@@ -50,6 +50,7 @@ if dein#load_state('/Users/jonathan/.config/nvim/dein')
   call dein#add('kana/vim-textobj-indent') " ai, ii, aI, iI
   call dein#add('lucapette/vim-textobj-underscore') " a_, i_
   call dein#add('sgur/vim-textobj-parameter') " a, , i,
+  call dein#add('Julian/vim-textobj-variable-segment') " av, iv
   " Display
   call dein#add('mhinz/vim-startify')
   call dein#add('bronson/vim-trailing-whitespace')
