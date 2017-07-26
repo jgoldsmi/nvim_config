@@ -19,7 +19,6 @@ if dein#load_state('/Users/jonathan/.config/nvim/dein')
   call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
   call dein#add('junegunn/fzf.vim')
   call dein#add('justinmk/vim-dirvish')
-  call dein#add('dyng/ctrlsf.vim')
   call dein#add('tpope/vim-eunuch')
   " Editing
   call dein#add('tpope/vim-fugitive')
@@ -257,8 +256,6 @@ nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>n :bn<CR>
 nnoremap <leader>p :bp<CR>
 nnoremap <leader>sl :BLines<CR>
-nnoremap <leader>sp :CtrlSF 
-nnoremap <leader>sP :CtrlSF<CR>
 nnoremap <leader>t :TagbarToggle<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>* :CtrlSF <c-r>=expand("<cword>")<CR><CR>
